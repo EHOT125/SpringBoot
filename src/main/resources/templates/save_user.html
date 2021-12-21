@@ -7,23 +7,25 @@
 <body>
 <h3>Create New User</h3>
 <br>
-<form th:method="POST" th:action="@{/createUser}" th:object="${info_user}">
+<form th:method="POST" th:action="@{/admin/createUser}" th:object="${info_user}">
     <input type="hidden" th:field="*{id}"/>
     <p><label for="name">Enter name: </label> <input type="text" th:field="${info_user.name}" id="name"/></p>
     <p><label for="alias">Enter alias: </label><input type="text" th:field="${info_user.alias}" id="alias"/></p>
     <p><label for="password">Enter password: </label><input type="text" th:field="${info_user.password}" id="password"/></p>
-    <p>
-        <label>USER: </label>
-        <input type="checkbox" th:field="*{roles}" th:value="ROLE_USER"/>
+    <p><label for="roles">Enter roles: </label><input type="text" th:field="${info_user.roles}" id="roles"/></p>
+<!--    <p>-->
+<!--        <label>USER: </label>-->
+<!--        <input type="checkbox" th:field="*{roles}" th:value="ROLE_USER"/>-->
 
-        <label>ADMIN: </label>
-        <input type="checkbox" th:field="*{roles}" th:value="ROLE_ADMIN"/>
-    </p>
+<!--        <label>ADMIN: </label>-->
+<!--        <input type="checkbox" th:field="*{roles}" th:value="ROLE_ADMIN"/>-->
+<!--    </p>-->
     <br>
+
     <input type="submit" value="OK">
 </form>
 <br>
-<form th:action="@{/admin}">
+<form th:action="@{/admin/list}">
     <input type="submit" value="Back">
 </form>
 </body>

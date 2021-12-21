@@ -21,10 +21,10 @@
         <td th:text="${user.password}">alias</td>
         <td th:text="${user.roles}">alias</td>
         <td>
-            <a th:href="@{/updateUser/{id}(id=${user.id})}">
+            <a th:href="@{/admin/updateUser/{id}(id=${user.id})}">
                 <input type="submit" value="Update"/>
             </a>
-            <a th:href="@{/anigilation_user_in_hell/{id}(id=${user.id})}">
+            <a th:href="@{/admin/anigilation_user_in_hell/{id}(id=${user.id})}">
                 <input type="submit" value="Delete"/>
             </a>
         </td>
@@ -32,7 +32,7 @@
     </tr>
 </table>
 <br>
-<form th:method="GET" th:action="@{/info_user}">
+<form th:method="GET" th:action="@{/admin/info_user}">
     <input type="submit" value="Create user!">
 </form>
 <br>
